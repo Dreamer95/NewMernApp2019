@@ -10,7 +10,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Menu></Menu>
-          <div className="container col-12">
+          <div className="container col-sm-12 ">
                 {this.showContentMenus(routes)}
           </div>
         </div>

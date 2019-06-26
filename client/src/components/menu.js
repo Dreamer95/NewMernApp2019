@@ -19,7 +19,7 @@ const menus = [
     },
     {
         name :"Color Picker",
-        to : "/color",
+        to : "/mycolor",
         exact: false
     }    
 ]
