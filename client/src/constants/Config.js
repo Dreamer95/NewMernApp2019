@@ -1,1 +1,1 @@
-export const API_URL = 'http://localhost:5000' || 'https://ngocdong195.herokuapp.com';
+export const API_URL = 'https://ngocdong195.herokuapp.com';

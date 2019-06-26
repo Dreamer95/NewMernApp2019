@@ -13,7 +13,7 @@ app.use(urlencodedParser);
 app.use(cors());
 
 // DB config
-const db = require('./config/keys').mongoURI;
+const db = require('./config/keys').newURI;
 
 //connect DB
 mongoose.connect(db, {useNewUrlParser: true })
