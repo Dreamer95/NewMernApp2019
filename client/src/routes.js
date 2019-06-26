@@ -23,7 +23,7 @@ const routes = [
         main : () => <MotelPage />
     },
     {
-        path : '/color',
+        path : '/mycolor',
         exact : true,
         main : () => <ColorPickerPage />
     },
