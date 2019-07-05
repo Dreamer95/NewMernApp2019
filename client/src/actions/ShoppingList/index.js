@@ -12,7 +12,7 @@ import callApiShopping from './../../utils/apiShopping';
 // con day viet theo async await
 export const actFetchProductsRequest = () => {
     return async (dispatch) => {
-        const res = await callApiShopping('products', 'GET', null);
+        const res = await callApiShopping('shoping-list', 'GET', null);
         dispatch(actFetchProducts(res.data));
     }
 }
@@ -26,7 +26,7 @@ export const actFetchProducts = (products) => {
 
 export const actDeleteProductRequest = (id) => {
     return (dispatch) => {
-        return callApiShopping(`products/${id}`, 'DELETE', null).then(res => {
+        return callApiShopping(`shoping-list/${id}`, 'DELETE', null).then(res => {
             dispatch(actDeleteProduct(id))
         })
     }
@@ -41,7 +41,7 @@ export const actDeleteProduct = (id) => {
 
 export const actAddProductRequest = (product) => {
     return dispatch => {
-        return callApiShopping('products', 'POST', product).then(res => {
+        return callApiShopping('shoping-list', 'POST', product).then(res => {
             dispatch(actAddProduct(res.data))
         })
     }
@@ -56,7 +56,7 @@ export const actAddProduct = (product) => {
 
 export const actUpdateProductRequest = (product) => {
     return dispatch => {
-        return callApiShopping(`products/${product.id}`,'PUT',product).then(res=>{
+        return callApiShopping(`shoping-list/${product.id}`,'PUT',product).then(res=>{
             dispatch(actUpdateProduct(res.data))
         })
     }
@@ -71,7 +71,7 @@ export const actUpdateProduct = (product) => {
 
 export const actGetProductRequest = (id) => {
     return (dispatch) => {
-        return callApiShopping(`products/${id}`,'GET',null).then(res=>{
+        return callApiShopping(`shoping-list/${id}`,'GET',null).then(res=>{
             dispatch(actGetProduct(res.data))
         })
     }

@@ -9,7 +9,7 @@ import Contact from './../components/blog/contact';
 class HomePage extends Component {
     render() {
         return (
-            <div>
+            <div className="container-fluid">
                 <Navigation></Navigation>
                 <Header></Header>
                 <About></About>

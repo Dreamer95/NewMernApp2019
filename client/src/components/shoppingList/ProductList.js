@@ -7,19 +7,17 @@ class ProductList extends Component {
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-10">
                     <div className="panel panel-info">
                         <div className="panel-heading">
-                            <h3 className="panel-title">Danh Sách Sản Phẩm</h3>
+                            <h3 className="panel-title">Shopping List</h3>
                         </div>
                         <div className="panel-body">
                             <table className="table table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th>STT</th>
-                                        <th>Mã SP</th>
-                                        <th>Tên SP</th>
-                                        <th>Mô Tả</th>
-                                        <th>Giá</th>
-                                        <th>Trạng Thái</th>
-                                        <th>Hành Động</th>
+                                        <th>Ordinal Numbers</th>
+                                        <th>Products Name</th>
+                                        <th>Quantity</th>
+                                        <th>Necessary</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>

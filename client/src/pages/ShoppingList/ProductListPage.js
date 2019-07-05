@@ -15,10 +15,11 @@ class ProductListPage extends Component {
         var { products } = this.props;
         return (
             <div className="container mt">
+            <h1 className="text-center">Shopping List</h1>
             <div className="row">
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-5">
                     <Link to="/" className="btn btn-info">Go Home</Link>&nbsp;
-                    <Link to="/product/add" className="btn btn-info">Thêm Sản Phẩm</Link>
+                    <Link to="/product/add" className="btn btn-info">Add Product</Link>
                 </div>
                 <ProductList>
                     {this.showProducts(products)}

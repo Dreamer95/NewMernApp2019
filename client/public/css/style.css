@@ -845,6 +845,11 @@ fieldset {
 }
 
 @media (max-width: 420px) {
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 10px;
+        line-height: 10px;
+    }
     nav li {
         margin: 6px;
     }

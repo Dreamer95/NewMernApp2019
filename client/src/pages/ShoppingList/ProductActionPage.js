@@ -29,8 +29,8 @@ class ProductActionPage extends Component {
             this.setState({
                 id: itemEditting.id,
                 txtName: itemEditting.name,
-                txtPrice: itemEditting.price,
-                chkbStatus: itemEditting.status
+                txtQuantity: itemEditting.quantity,
+                chkbStatus: itemEditting.necessary
             })
         }
 
@@ -47,31 +47,31 @@ class ProductActionPage extends Component {
 
     onSave = (e) => {
         e.preventDefault();
-        var { id, txtName, txtPrice, chkbStatus } = this.state;
+        var { id, txtName, txtQuantity, chkbStatus } = this.state;
         var { history, onAddProduct, onUpdateProduct } = this.props;
         var product = {
             id: id,
             name: txtName,
-            price: txtPrice,
-            status: chkbStatus
+            quantity: txtQuantity,
+            necessary: chkbStatus
         }
-        if (txtName && txtPrice && id === '') {
+        if (txtName && txtQuantity && id === '') {
             onAddProduct(product);            
-        } else if (txtName && txtPrice && id !== '') {
+        } else if (txtName && txtQuantity && id !== '') {
             onUpdateProduct(product);
         }
         history.goBack();
     }
 
     render() {
-        var { txtName, txtPrice, chkbStatus } = this.state;
+        var { txtName, txtQuantity, chkbStatus } = this.state;
 
         return (
             <div className="container mt">
             <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 <form onSubmit={this.onSave}>
                     <div className="form-group">
-                        <label >Tên Sản Phẩm : </label>
+                        <label >Product Name : </label>
                         <input type="text"
                             className="form-control"
                             name="txtName"
@@ -79,15 +79,15 @@ class ProductActionPage extends Component {
                             onChange={this.onChange} />
                     </div>
                     <div className="form-group">
-                        <label >Giá : </label>
+                        <label >Quantity: </label>
                         <input type="number"
                             className="form-control"
-                            name="txtPrice"
-                            value={txtPrice}
+                            name="txtQuantity"
+                            value={txtQuantity}
                             onChange={this.onChange} />
                     </div>
                     <div className="form-group">
-                        <label >Trạng thái : </label>
+                        <label >Necessary : </label>
                     </div>
                     <div className="checkbox">
                         <label>
@@ -95,11 +95,11 @@ class ProductActionPage extends Component {
                                 name="chkbStatus"
                                 value={chkbStatus}
                                 onChange={this.onChange} />
-                            Còn Hàng
+                            Yes
                        </label>
                     </div>
-                    <Link to="/product-list" className="btn btn-primary mr-10">QuayLại</Link>
-                    <button type="submit" className="btn btn-primary">Lưu Lại</button>
+                    <Link to="/product-list" className="btn btn-primary mr-10">Come Back</Link>&nbsp;
+                    <button type="submit" className="btn btn-primary">Save</button>
                 </form>
             </div>
             </div>
