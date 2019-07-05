@@ -58,11 +58,11 @@ class AddColor extends Component{
         return(            
             <div className="panel panel-default">
                   <div className="panel-heading">
-                        <h3 className="panel-title">Thêm màu</h3>
+                        <h3 className="panel-title">Add Color</h3>
                   </div>
                   <div className="panel-body">
                         <div>
-                            <label>Mã Màu :</label><span>{colorName}</span>                            
+                            <label>Code :</label><span>{colorName}</span>                            
                             <input  type="color" 
                                     name="colorName" 
                                     id="input"
@@ -74,11 +74,11 @@ class AddColor extends Component{
                         <button type="button" 
                                 className="btn btn-primary"
                                 onClick={()=>this.onSave(colorName,id)}
-                        >Lưu</button>&nbsp;     
+                        >Save</button>&nbsp;     
                         <button type="button" 
                                 className="btn btn-primary"
                                 onClick={this.onClose}
-                        >Huỷ</button>
+                        >Cancel</button>
                         </div>
                         
                   </div>

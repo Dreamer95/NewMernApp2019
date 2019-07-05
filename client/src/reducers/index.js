@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux';
-import motelList from './motelReducer';
-import price from './priceReducer';
 import colorList from './colorReducer';
+import products from './../reducers/shoppingList/products';
+import itemEditting from './../reducers/shoppingList/itemEditting';
 
 const appReducer = combineReducers({
-    motelList,
-    price,
-    colorList
+    colorList,
+    products,
+    itemEditting
 });
 
 export default appReducer;

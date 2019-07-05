@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Menu from './components/menu';
 import routes from './routes';
+import Preloader from './components/blog/preloader';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Menu></Menu>
-          <div className="container col-sm-12 ">
+          <Preloader></Preloader>
+          <div>
                 {this.showContentMenus(routes)}
           </div>
         </div>

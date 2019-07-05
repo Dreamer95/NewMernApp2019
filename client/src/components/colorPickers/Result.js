@@ -17,7 +17,7 @@ class Result extends Component {
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <p>Color : {this.props.p_Color} - Fontsize : {this.props.p_fontSize}px</p>
                 <div id="content" style={this.setStyle()}>
-                    Nội dung setting
+                    Content setting
                 </div>
             </div>
 

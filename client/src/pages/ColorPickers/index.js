@@ -7,6 +7,7 @@ import ColorTable from './../../components/colorPickers/ColorTable';
 import AddColor from './../../components/colorPickers/AddColor';
 import { connect } from 'react-redux';
 import * as Action from './../../actions/ColorPicker/colorAction';
+import { Link } from 'react-router-dom';
 
 class ColorPickerPage extends Component {
   constructor(props) {
@@ -139,11 +140,11 @@ class ColorPickerPage extends Component {
                             <button type="button" 
                                     className="btn btn-danger"
                                     onClick = {()=>this.onUpdate(color)}
-                            >Sửa</button>&nbsp;
+                            >Edit</button>&nbsp;
                             <button type="button" 
                                     className="btn btn-danger"
                                     onClick={()=>this.onDelete(color._id)}
-                            >Xoá</button>
+                            >Delete</button>
                         </td>
                     </tr>
         })
@@ -161,37 +162,39 @@ render() {
     var { myColor, fontZise, isDisplay, isDisplayTask, colorEdit } = this.state;
     var { colors } = this.props;
     return (
-      <div className="container-fluid mt myFont">
-
-        <div className="row-fluid">
-          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div className="container mt">
+        <h1 className="text-center">Color Picker</h1>        
+        <div className="row mt">              
+          <div className="col-md-6 col-lg-6">
+            <Link to="/" className="btn btn-primary mb-2">Go Home</Link>    
             <ColorPicker p_Color={myColor} onReceiveColor={this.onSetColor}
               colors={colors} />
           </div>
-          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <div className="col-md-6 col-lg-6">
             <SizeSetting p_fontSize={fontZise} onChangeSize={this.onSetFontSize} />
-            <Reset onSettingDefault={this.onSettingDefault} onToggle={this.onToggle} />
+            <Reset onSettingDefault={this.onSettingDefault} onToggle={this.onToggle} />            
           </div>
         </div>
-        <div className={isDisplay ? " d-block" : " d-none"}>
-          <div className={isDisplayTask ? "col-xs-4 col-sm-4 col-md-4 col-lg-4" : "d-none"}>
-            <AddColor onAddColor={this.onAddColor} 
-                      colorEdit={colorEdit} 
-                      onUpdateColor={this.onUpdateColor}
-                      onClose={this.onCloseTask}
-                      />
-          </div>
+        <div className={isDisplay ? "row" : "d-none"}>
+            
+            <div className={isDisplayTask ? "col-md-4 col-lg-4" : "d-none"}>
+              <AddColor onAddColor={this.onAddColor} 
+                        colorEdit={colorEdit} 
+                        onUpdateColor={this.onUpdateColor}
+                        onClose={this.onCloseTask}
+                        />
+            </div>
 
-          <div className={isDisplayTask ? "col-xs-8 col-sm-8 col-md-8 col-lg-8" : "col-xs-12 col-sm-12 col-md-12 col-lg-12"}>
-            <button type="button"
-              className="btn btn-success float-left"
-              onClick={this.onToggleTask}
-            >Thêm màu</button>
-            <ColorTable >
-                  {this.showColorItem(colors)}
-            </ColorTable>
-          </div>
-
+            <div className={isDisplayTask ? "col-md-8 col-lg-8" : "col-md-12 col-lg-12"}>
+              <button type="button"
+                className="btn btn-success"
+                onClick={this.onToggleTask}
+              >Add Color</button>
+              <ColorTable >
+                    {this.showColorItem(colors)}
+              </ColorTable>
+            </div>
+            
         </div>
         <Result p_Color={myColor} p_fontSize={fontZise} />
       </div>

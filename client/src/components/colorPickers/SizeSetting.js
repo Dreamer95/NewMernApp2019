@@ -18,13 +18,13 @@ class SizeSetting extends Component {
                             className="btn btn-primary"
                             onClick={() => this.ChangeSize(2)}
                     >
-                        Tăng
+                        Up
                     </button>&nbsp;
                     <button type="button" 
                             className="btn btn-primary"
                             onClick={() => this.ChangeSize(-2)}
                     >
-                        Giảm
+                        Down
                     </button>
 
                 </div>

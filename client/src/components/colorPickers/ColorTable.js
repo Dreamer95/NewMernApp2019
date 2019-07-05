@@ -7,7 +7,7 @@ class ColorTable extends Component {
                                 
                 <div className="panel-heading">
                     <h2 className="panel-title">
-                        Bảng màu                   
+                        Color Board                   
                     </h2>
                     
                 </div>
@@ -18,9 +18,9 @@ class ColorTable extends Component {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Tên màu</th>
-                                    <th>Hình ảnh</th>
-                                    <th>Hành động</th>
+                                    <th>Color Name</th>
+                                    <th>Image</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>

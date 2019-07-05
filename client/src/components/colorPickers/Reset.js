@@ -17,7 +17,7 @@ class Reset extends Component {
                     className="btn btn-success"
                     onClick={this.onToggle}
                 >
-                    Bảng màu
+                    Color Board
                 </button>&nbsp;
 
                 <button type="button"

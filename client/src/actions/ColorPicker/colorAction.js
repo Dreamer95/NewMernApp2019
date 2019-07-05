@@ -39,7 +39,7 @@ export const actAddColor = (color) => {
 
 export const actDeleteColorRequest = (id) =>{
     return async (dispatch)=>{
-        const res = await callApi(`color/${id}`,'DELETE',null)
+        await callApi(`color/${id}`,'DELETE',null)
         dispatch(actDeleteColor(id))
     }
 }
