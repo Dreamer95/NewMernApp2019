@@ -16,9 +16,9 @@ class Project extends Component {
                             <div className="categories-grid wow fadeInLeft">
                                 <nav className="categories">
                                     <ul className="portfolio_filter">
-                                        <li><a href="#" className="active" data-filter="*">All</a></li>
-                                        <li><a href="#" data-filter=".color">ColorPicker</a></li>
-                                        <li><a href="#" data-filter=".shopping">ShoppingList</a></li>
+                                        <li><a href="" className="active" data-filter="*">All</a></li>
+                                        <li><a href="" data-filter=".color">ColorPicker</a></li>
+                                        <li><a href="" data-filter=".shopping">ShoppingList</a></li>
                                     </ul>
                                 </nav>
                             </div>
