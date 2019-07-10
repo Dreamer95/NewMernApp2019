@@ -19,7 +19,7 @@ class Experience extends Component {
                         Company : "Company 8 - Mobifone Corporation",
                         Job : "Employee",
                         Summary : "Data analysis",
-                        Desc : "Make job PL/SQL Oracle to follow data in telecommunication ."
+                        Desc : "Make job PL/SQL Oracle to track data in telecommunication ."
                     },                   
                     {
                         Id : 1,
